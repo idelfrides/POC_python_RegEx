@@ -12,9 +12,13 @@ class ManageInformation(object):
     def show_results(self, result, the_method):
         """ Show all return of called method 
             
-            :type self: autoreference parameter
-            :type result: the result returned by a method 
-            :type the_method: the method called 
+            :param self: autoreference parameter
+            :type self: python reserved word
+            :param result: the result returned by a method 
+            :type result: list or object
+            :param the_method: Name of the method called
+            :type the_method: str
+            :returns: None
             :rtype: None
         """
 
