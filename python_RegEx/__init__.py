@@ -1,2 +1,2 @@
 from . import RegExModule as reg_ex
-from . import ManageInformation as info
+# from . import ManageInformation as info

@@ -1,6 +1,6 @@
 
+from . import ManageInformation as info
 import re
-from python_RegEx import info
 
 
 class RegExModule(object):
@@ -9,7 +9,6 @@ class RegExModule(object):
     def __init__(self):
         """ Thunder init do nothing """
         self.info_obj = info.ManageInformation()
-
 
 
     def search(self, search_string, text):
