@@ -1,5 +1,6 @@
 
 import re
+from python_RegEx import info
 
 
 class RegExModule(object):
@@ -7,7 +8,8 @@ class RegExModule(object):
 
     def __init__(self):
         """ Thunder init do nothing """
-        pass
+        self.info_obj = info.ManageInformation()
+
 
 
     def search(self, search_string, text):
@@ -18,7 +20,7 @@ class RegExModule(object):
         """
 
         result = re.search(search_string , text)
-        self.show_results(result, 'search')
+        self.info_obj.show_results(result, 'search')
 
               
     def find_all(self, search_string, text):
@@ -28,7 +30,7 @@ class RegExModule(object):
         """
 
         result = re.findall(search_string, text)
-        self.show_results(result, 'findall')
+        self.info_obj.show_results(result, 'findall')
 
     
     def replace(self, car2remove, car2add, text):
@@ -39,42 +41,5 @@ class RegExModule(object):
         """
 
         result = re.sub(car2remove, car2add, text, 3)
-        self.show_results(result, 'sub')
+        self.info_obj.show_results(result, 'sub')
 
-
-
-    def show_results(self, result, the_method):
-        """ Show all return of called method 
-            
-            :type self: autoreference parameter
-            :type result: the result returned by a method 
-            :type the_method: the method called 
-            :rtype: None
-        """
-
-        print('\n\n')
-        print('-' * 80)
-
-        if the_method == 'findall':
-            print('\n\n\t RESPONSE OF  {}  METHOD \n\n'.format(the_method))
-
-            print('\t RESULT LIST --> {} '.format(result))         
-            print('\n')
-            print('-' * 80)
-
-        if the_method == 'search':
-            print('\n\n\t RESPONSE OF  {}  METHOD \n\n'.format(the_method))
-
-            print('\t STRING --> {} '.format(result.string))
-            print('\t SPAN --> {} '.format(result.span()))
-            print('\t WORD --> {} '.format(result.group()))            
-            print('\n')
-            print('-' * 80)
-        
-        if the_method == 'sub':
-            print('\n\n\t  RESPONSE OF  {}  METHOD \n\n'.format(the_method))
-
-            print('\t STRING --> {} '.format(result))      
-            print('\n')
-            print('-' * 80)            
-        
