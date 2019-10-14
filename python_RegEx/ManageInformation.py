@@ -1,3 +1,4 @@
+""" Manage informations to user module """
 
 
 class ManageInformation(object):

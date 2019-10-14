@@ -1,3 +1,10 @@
+""" Main method 
+
+    This is a proof of concept made 
+    to Regular Expressions in Python
+    -------------------------------------
+"""
+
 from python_RegEx import reg_ex 
 
 

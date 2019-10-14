@@ -1,3 +1,5 @@
+""" Regular expression module """
+
 
 from . import ManageInformation as info
 import re
